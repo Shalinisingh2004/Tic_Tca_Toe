@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="party hideBox">
+            </div>
+            
+            <h2 class="main-head">TIC TAC TOE GAME <img src="\tic.webp" alt=""></h2>
+
+            <button class="start btn">Start Game</button>
+
+            
+            <div class="choose-mode hideBox">
+                <h2 class="choose-head">Choose Mode:</h2>
+                <div class="choose">
+                    <button class="btn text">Single Mode</button>
+                    <button class="btn text">Dual Mode</button>
+                </div>
+                
+            </div>
+
+            <h2 class="mode hideBox"></h2>
+
+            <div class="choose-player hideBox">
+                <h3 class="head-2">Do you want be X or O ?</h3>
+                <p><button class="btn text">X</button>
+                    <button class="btn text">O</button>
+                </p>
+            </div>
+
+            <div class="choosed-player hideBox">
+                <p class="player-1"></p>
+                <p class="player-2"></p>
+            </div>
+
+            <h3 class="turn hideBox"></h3>
+
+            <div class="board">
+                <input class=".input input-1" type="text" id="one" readonly placeholder="O">
+                <input class=".input input-2" type="text" id="two" readonly placeholder="X">
+                <input class=".input input-3" type="text" id="three" readonly placeholder="O">
+                <input class=".input input-4" type="text" id="four" readonly placeholder="X">
+                <input class=".input input-5" type="text" id="five" readonly placeholder="O">
+                <input class=".input input-6" type="text" id="six" readonly placeholder="X">
+                <input class=".input input-7" type="text" id="seven" readonly placeholder="O">
+                <input class=".input input-8" type="text" id="eight" readonly placeholder="X">
+                <input class=".input input-9" type="text" id="nine" readonly placeholder="O">
+            </div>
+
+            <div class="reset hideBox">
+                <button class="btn text">Quit</button>
+                <button class="btn text">Replay Game</button>
+            </div>
+
+
+        </div>
+
+        <div class="quit hideBox">
+                <h3 class="head-2">Do you really want to Quit?</h3>
+                <p><button class="btn text">Yes</button>
+                    <button class="btn text">No</button>
+                </p>
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

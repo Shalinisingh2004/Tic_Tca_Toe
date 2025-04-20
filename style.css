@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    user-select: none;
+    cursor: default;
+}
+
+.container{
+    width: 100%;
+    height: 150vh;
+    background: linear-gradient(135deg, rgb(34, 193, 195), rgb(253, 187, 45)); /* A vibrant gradient from teal to orange */
+    position: absolute;
+}
+
+.party{
+    position: absolute;
+    z-index: 2;
+}
+
+.party img{
+    background: transparent;
+}
+
+.row{
+    width: 100%;
+    max-width: 500px;
+    background-color: #54a12d; /* Darker grey background for the main box */
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Adding shadow to give depth */
+}
+
+.row .main-head{
+    color: #FFD700; /* Bright golden color for title */
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-head img{
+    height: 50px;
+    width: 50px;
+}
+
+.btn{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background-color: #FF6347; /* Tomato red for buttons */
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 22px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    background-color: #FF4500; /* Darker orange when hovered */
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(255, 69, 0, 0.4); /* Light shadow effect */
+}
+
+.btn:active{
+    transform: translateY(5px);
+    transition: ease-in-out;
+}
+
+.choose-mode{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.choose{
+    display: flex;
+    gap: 40px;
+}
+
+.mode{
+    padding: 10px 20px;
+    background-color: #FFD700; /* Gold color for mode buttons */
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 20px;
+    cursor: not-allowed;
+    border-radius: 5px;
+}
+
+.set-player{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+.set-player input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #FFD700; /* Golden underline */
+    font-size: 25px;
+    padding: 10px;
+    color: #FFD700;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.disabled{
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 22px;
+    background-color: #555; /* Dark grey for disabled buttons */
+    color: #bbb;
+    outline: none;
+    border: none;
+    cursor: not-allowed;
+}
+
+.choose-player{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choose-player .head-2{
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #FF6347; /* Tomato color for header */
+}
+
+.choose-player p{
+    display: flex;
+    justify-content: space-between;
+    gap: 120px;
+}
+
+p .btn{
+    padding: 10px 30px;
+    font-size: 30px;
+    background-color: #FF6347; /* Tomato red */
+    color: #FFF;
+    border-radius: 5px;
+}
+
+.choosed-player{
+    display: flex;
+    gap: 100px;
+    font-size: 24px;
+    color: #FFD700;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.turn{
+    font-size: 30px;
+    color: #1E90FF; /* Dodger blue for turn indication */
+}
+
+.board{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 130px);
+    grid-template-rows: repeat(3, 130px);
+    gap: 10px;
+    border-radius: 5px;
+    background-color: #2F4F4F; /* Dark slate gray background for the board */
+}
+
+.board input{
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 90px;
+    background-color: #D3D3D3; /* Light gray background for inputs */
+    border-radius: 5px;
+    cursor: pointer;
+    color: #B43F3F; /* Maroon color for input text */
+    font-family: monospace;
+}
+
+.input::placeholder{
+    color: #808080; /* Grey color for placeholder */
+}
+
+.reset{
+    display: flex;
+    gap: 100px;
+}
+
+.quit{
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    background-color: #B43F3F; /* Maroon background for quit button */
+    margin: 100px auto;
+    padding: 10px;
+    z-index: 1;
+    top: -527px;
+    border-radius: 5px;
+}
+
+.blur{
+    filter: blur(10px);
+}
+
+.quit .head-2{
+    text-align: center;
+    margin: 10px 0 20px;
+    font-size: 24px;
+    color: #FFF; /* White text for quit header */
+}
+
+.quit p{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.hideBox{
+    display: none;
+}
+@media (max-width: 768px) {
+    .row {
+        width: 90%;
+        max-width: none;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .row .main-head {
+        font-size: 24px;
+        gap: 10px;
+    }
+
+    .main-head img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .btn {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+
+    .choose {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mode {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+
+    .set-player input {
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    .choose-player .head-2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .choose-player p {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .choosed-player {
+        flex-direction: column;
+        gap: 20px;
+        font-size: 20px;
+    }
+
+    .turn {
+        font-size: 24px;
+    }
+
+    .board {
+        grid-template-columns: repeat(3, 90px);
+        grid-template-rows: repeat(3, 90px);
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .board input {
+        font-size: 60px;
+    }
+
+    .reset {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .quit {
+        max-width: 90%;
+        margin: 50px auto;
+        padding: 15px;
+        top: -400px;
+    }
+
+    .quit .head-2 {
+        font-size: 20px;
+    }
+
+    .quit p {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
